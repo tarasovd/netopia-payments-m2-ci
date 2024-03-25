@@ -1,28 +1,14 @@
-# NETOPIA Payments module for Magento 2.4.X
-###### (for previous versions using the other branches of this GitHub repository)
+# NETOPIA Payments module for Magento 2.4.X (composer-installable)
 
 ## Options
 * Card payment
 * mobilPay WALLET
 
 ## Installation
-The Module placed in folder "Netopia"
-1. put **Netopia** folder inside of <your_magento_root>/app/code/
-    * verify the ownership & make sure have right user and/or group ownership
-2. SSH to your Magento server and run the following commands
-    * <code>php bin/magento setup:upgrade</code>
-    * <code>php bin/magento setup:static-content:deploy</code>
-    * <code>php bin/magento ca:cl</code>
-3.  Complete the **Configuration**   
-4.  **Enable** the module.
-    ###### Additional option
-    By Enable the **Allow mobilPay WALLET Payment** you will give this option to your clients to pay also via **mobilPay WALLET** by scan a simple **QrCode** 
-    * To use **mobilPay WALLET Payment**, the **Username** and **Password** should be set as your account on **https://admin.mobilpay.ro**
-5. Download your keys from https://admin.mobilpay.ro/ for Live mode and https://sandbox.mobilpay.ro for Sandbox mode.
-   Set your Mode at Mode **Configuration** and  Upload the certificates.
-   
-   Note : if you would like to have possibility to work with both mode (**Sandbox and Live**), you will need the keys for each mode.
+1. Add custom 'vcs' type composer repository.
+2. Run composer require netopia/netcard:"dev-master"
 
+** See original repository for more info.
 
 ## Verification
 By run the following command you can make sure, if this module is installed successfully on your Magento Proiect
