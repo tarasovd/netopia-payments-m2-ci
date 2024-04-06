@@ -217,7 +217,7 @@ abstract class MobilpayPaymentRequestAbstract
 			throw new \Exception('Failed decoding envelope key', self::ERROR_CONFIRM_FAILED_DECODING_ENVELOPE_KEY);
 		}
 
-		$srcIv = base64_decode($iv);
+		$srcIv = $iv ? base64_decode($iv) : null;
 		if($srcIv === false)
 		{
 			throw new \Exception('Failed decoding initialization vector', self::ERROR_CONFIRM_FAILED_DECODING_IV);
